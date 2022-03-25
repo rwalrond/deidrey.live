@@ -31,25 +31,25 @@
 		<link rel="icon" href="./media/favicon.ico" />
 		<link itemprop="thumbnailUrl" href="./media/vdoNinja_logo_full.png" />
 		<!-- Primary Meta Tags -->
-		<title>VDO.Ninja</title>
-		<meta name="title" content="VDO.Ninja" />
+		<title>Deidrey.Live</title>
+		<meta name="title" content="Deidrey.Live" />
 		<meta name="description" content="Bring live video from your smartphone, computer, or friends directly into your Studio. 100% free." />
 		<meta name="author" content="Steve Seguin" />
 		<!-- Open Graph / Facebook -->
-		<meta property="og:site_name" content="VDO.Ninja" />
+		<meta property="og:site_name" content="Deidrey.Live" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://vdo.ninja/" />
-		<meta property="og:title" content="VDO.Ninja" />
+		<meta property="og:url" content="https://deidrey.live/" />
+		<meta property="og:title" content="deidrey.live" />
 		<meta property="og:description" content="Bring live video from your smartphone, computer, or friends directly into Studio. 100% free." />
-		<meta property="og:image" itemprop="image" content="https://vdo.ninja/media/vdoNinja_logo_full.png" />
+		<meta property="og:image" itemprop="image" content="https://deidrey.live/media/vdoNinja_logo_full.png" />
 		<meta name="msapplication-TileImage" content="./media/vdoNinja_logo_full.png" />
 		<meta property="og:image:type" content="image/png" />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content="https://vdo.ninja/" />
-		<meta property="twitter:title" content="VDO.Ninja" />
+		<meta property="twitter:url" content="https://deidrey.live/" />
+		<meta property="twitter:title" content="Deidrey.Live" />
 		<meta property="twitter:description" content="Bring live video from your smartphone, computer, or friends directly into OBS Studio. 100% free." />
 		<meta property="twitter:image" content="./media/vdoNinja_logo_full.png" />
 		<meta name="msapplication-TileColor" content="#da532c" />
@@ -85,7 +85,7 @@
 			
 			<a id="logoname" href="./" style="text-decoration: none; color: white; margin: 0 2px 0px 8px;">
 				<span data-translate="logo-header">
-					<font id="qos">V</font>DO.Ninja 
+					<font id="qos">Deidrey</font>.Live 
 				</span>
 			</a>
 			<div id="head1" style="display: inline-block; padding:1px; position: relative;">
@@ -1931,7 +1931,7 @@
 			session.version = "21.1";
 			session.streamID = session.generateStreamID(); // randomly generates a streamID for this session. You can set your own programmatically if needed
 			
-			session.defaultPassword = "someEncryptionKey123"; // Change this password if self-deploying for added security/privacy
+			session.defaultPassword = "Deidrey@WalrondTech2022#"; // Change this password if self-deploying for added security/privacy
 			session.salt = location.hostname; // used only if password is not == False. You can change to "session.salt = location.hostname+location.pathname;" for greater deployment isolation
 			
 			// session.configuration = {
@@ -1989,7 +1989,8 @@
 			// session.buffer // int in milliseconds ; see the docs
 			// session.roomid // "yyyy"  -- the room name to use.  alphanumeric.
 			// session.scene // the scene name. Scene 0, 1, ... 8, or any custom scene name is supported.  STRING value. Needed to have a clean view link of a guest stream
-			// session.title // "zzzz"   ; sets the title of the browser page.
+			session.title = "deidrey.live"; // sets the title of the browser page.
+			session.guestPath = "/join/";
 			// session.introOnClean = true; // this will load the page with the webcam selection screen if &push or &room is in the URL; no need to use &webcam.
 			// session.lowBitrateCutoff = 300; // Set a minimum bitrate (in kbps) before the stream is hidden. Useful for IRL streams maybe
 		</script>

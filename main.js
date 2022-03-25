@@ -245,7 +245,7 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 		}
 	}
 	
-	if (urlParams.has('broadcast') || urlParams.has('bc')) {
+	if (session.forcebroadcast || urlParams.has('broadcast') || urlParams.has('bc')) {
 		log("Broadcast flag set");
 		session.broadcast = urlParams.get('broadcast') || urlParams.get('bc') || null;
 		
@@ -268,7 +268,7 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 		session.style = 1;
 		//getById("header").style.display = "none";
 		//getById("header").style.opacity = 0;
-		session.showList=true;
+		session.showList=false;
 	}
 
 	if (urlParams.has('showlist')) {
@@ -1364,7 +1364,7 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 		getById("guestTips").style.display="flex";
 	}
 
-	if (urlParams.has('audiogain') || urlParams.has('gain') || urlParams.has('g')) {
+	if (session.forcemute || urlParams.has('audiogain') || urlParams.has('gain') || urlParams.has('g')) {
 		log("audio gain  ENABLED");
 		session.audioGain = urlParams.get('audiogain') || urlParams.get('gain') || urlParams.get('g');
 		session.audioGain = parseInt(session.audioGain) || 0;
@@ -2992,7 +2992,7 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 		}
 	} 
 	
-	if (urlParams.has('nofileshare') || urlParams.has('nodownloads') || urlParams.has('nofiles')){
+	if (session.nofileshare || urlParams.has('nofileshare') || urlParams.has('nodownloads') || urlParams.has('nofiles')){
 		session.hostedFiles = false;
 		session.nodownloads = true;
 		getById('sharefilebutton').style.display = "none";
